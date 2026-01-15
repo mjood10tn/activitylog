@@ -1,17 +1,17 @@
 {
-    "name": "rmsramos/activitylog",
+    "name": "mjood10tn/activitylog",
     "description": "This is my package activitylog",
     "keywords": [
-        "Rmsramos",
+        "mjood10tn",
         "laravel",
         "activitylog"
     ],
-    "homepage": "https://github.com/rmsramos/activitylog",
+    "homepage": "https://github.com/mjood10tn/activitylog",
     "license": "MIT",
     "authors": [
         {
             "name": "Rômulo Ramos",
-            "email": "rmsramos@gmail.com",
+            "email": "mjood10tn@gmail.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Rmsramos\\Activitylog\\": "src/",
-            "Rmsramos\\Activitylog\\Database\\Factories\\": "database/factories/"
+            "mjood10tn\\Activitylog\\": "src/",
+            "mjood10tn\\Activitylog\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rmsramos\\Activitylog\\Tests\\": "tests/",
+            "mjood10tn\\Activitylog\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -73,10 +73,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Rmsramos\\Activitylog\\ActivitylogServiceProvider"
+                "mjood10tn\\Activitylog\\ActivitylogServiceProvider"
             ],
             "aliases": {
-                "Activitylog": "Rmsramos\\Activitylog\\Facades\\Activitylog"
+                "Activitylog": "mjood10tn\\Activitylog\\Facades\\Activitylog"
             }
         }
     },
