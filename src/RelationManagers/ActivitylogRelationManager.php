@@ -8,7 +8,7 @@ use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
 use mjood10tn\Activitylog\ActivitylogPlugin;
-use mjood10tn\Activitylog\Resources\ActivitylogResource;
+use mjood10tn\Activitylog\Resources\Activitylog\ActivitylogResource;
 
 class ActivitylogRelationManager extends RelationManager
 {
@@ -24,7 +24,7 @@ class ActivitylogRelationManager extends RelationManager
             ->headline();
     }
 
-    public function form(Form $form): Form
+    public function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
     {
         return ActivitylogResource::form($form);
     }

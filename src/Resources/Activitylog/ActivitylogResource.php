@@ -1,8 +1,7 @@
 <?php
 
-namespace mjood10tn\Activitylog\Resources\ActivitylogResource;
+namespace mjood10tn\Activitylog\Resources\Activitylog;
 
-use ActivitylogForm;
 use Exception;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\DatePicker;
@@ -28,8 +27,9 @@ use mjood10tn\Activitylog\Actions\Concerns\ActionContent;
 use mjood10tn\Activitylog\ActivitylogPlugin;
 use mjood10tn\Activitylog\Helpers\ActivityLogHelper;
 use mjood10tn\Activitylog\RelationManagers\ActivitylogRelationManager;
-use mjood10tn\Activitylog\Resources\ActivitylogResource\Pages\ListActivitylog;
-use mjood10tn\Activitylog\Resources\ActivitylogResource\Pages\ViewActivitylog;
+use mjood10tn\Activitylog\Resources\Activitylog\Schemas\ActivitylogForm;
+use mjood10tn\Activitylog\Resources\Activitylog\Pages\ListActivitylog;
+use mjood10tn\Activitylog\Resources\Activitylog\Pages\ViewActivitylog;
 use mjood10tn\Activitylog\Traits\HasCustomActivityResource;
 use Spatie\Activitylog\Models\Activity;
 

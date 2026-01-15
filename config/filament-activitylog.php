@@ -16,7 +16,7 @@ return [
         'default_sort_column' => 'id',
         'default_sort_direction' => 'desc',
         'navigation_count_badge' => false,
-        'resource' => \mjood10tn\Activitylog\Resources\ActivitylogResource\ActivitylogResource::class,
+        'resource' => \mjood10tn\Activitylog\Resources\Activitylog\ActivitylogResource::class,
     ],
     'date_format' => 'd/m/Y',
     'datetime_format' => 'd/m/Y H:i:s',

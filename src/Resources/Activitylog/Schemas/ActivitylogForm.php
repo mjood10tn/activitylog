@@ -1,4 +1,5 @@
 <?php
+namespace mjood10tn\Activitylog\Resources\Activitylog\Schemas;
 
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
