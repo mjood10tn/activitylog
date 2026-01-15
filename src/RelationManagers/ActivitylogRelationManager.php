@@ -4,7 +4,7 @@ namespace mjood10tn\Activitylog\RelationManagers;
 
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
-use Filament\Tables\Actions\ViewAction;
+use Filament\Actions\ViewAction;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
 use mjood10tn\Activitylog\ActivitylogPlugin;
