@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmsramos\Activitylog\Resources\ActivitylogResource;
+namespace mjood10tn\Activitylog\Resources\ActivitylogResource;
 
 use ActivitylogForm;
 use Exception;
@@ -24,13 +24,13 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Livewire\Component as Livewire;
-use Rmsramos\Activitylog\Actions\Concerns\ActionContent;
-use Rmsramos\Activitylog\ActivitylogPlugin;
-use Rmsramos\Activitylog\Helpers\ActivityLogHelper;
-use Rmsramos\Activitylog\RelationManagers\ActivitylogRelationManager;
-use Rmsramos\Activitylog\Resources\ActivitylogResource\Pages\ListActivitylog;
-use Rmsramos\Activitylog\Resources\ActivitylogResource\Pages\ViewActivitylog;
-use Rmsramos\Activitylog\Traits\HasCustomActivityResource;
+use mjood10tn\Activitylog\Actions\Concerns\ActionContent;
+use mjood10tn\Activitylog\ActivitylogPlugin;
+use mjood10tn\Activitylog\Helpers\ActivityLogHelper;
+use mjood10tn\Activitylog\RelationManagers\ActivitylogRelationManager;
+use mjood10tn\Activitylog\Resources\ActivitylogResource\Pages\ListActivitylog;
+use mjood10tn\Activitylog\Resources\ActivitylogResource\Pages\ViewActivitylog;
+use mjood10tn\Activitylog\Traits\HasCustomActivityResource;
 use Spatie\Activitylog\Models\Activity;
 
 class ActivitylogResource extends Resource
@@ -343,7 +343,7 @@ class ActivitylogResource extends Resource
 
     public static function shouldRegisterNavigation(): bool
     {
-        $plugin = Filament::getCurrentPanel()?->getPlugin('rmsramos/activitylog');
+        $plugin = Filament::getCurrentPanel()?->getPlugin('mjood10tn/activitylog');
 
         return $plugin?->getNavigationItem() ?? false;
     }

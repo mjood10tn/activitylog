@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmsramos\Activitylog\Helpers;
+namespace mjood10tn\Activitylog\Helpers;
 
 use Illuminate\Support\Str;
 

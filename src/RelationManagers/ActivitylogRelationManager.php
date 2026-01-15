@@ -1,14 +1,14 @@
 <?php
 
-namespace Rmsramos\Activitylog\RelationManagers;
+namespace mjood10tn\Activitylog\RelationManagers;
 
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
-use Rmsramos\Activitylog\ActivitylogPlugin;
-use Rmsramos\Activitylog\Resources\ActivitylogResource;
+use mjood10tn\Activitylog\ActivitylogPlugin;
+use mjood10tn\Activitylog\Resources\ActivitylogResource;
 
 class ActivitylogRelationManager extends RelationManager
 {

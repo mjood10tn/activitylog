@@ -1,9 +1,9 @@
 <?php
 
-namespace Rmsramos\Activitylog\Actions;
+namespace mjood10tn\Activitylog\Actions;
 
 use Filament\Actions\Action;
-use Rmsramos\Activitylog\Actions\Concerns\ActionContent;
+use mjood10tn\Activitylog\Actions\Concerns\ActionContent;
 
 class ActivityLogTimelineSimpleAction extends Action
 {

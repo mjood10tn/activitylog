@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmsramos\Activitylog\Infolists\Components;
+namespace mjood10tn\Activitylog\Infolists\Components;
 
 use Closure;
 use Filament\Forms\Components\Concerns\CanAllowHtml;
@@ -8,8 +8,8 @@ use Filament\Infolists\Components\Entry;
 use Filament\Support\Concerns\HasExtraAttributes;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
-use Rmsramos\Activitylog\ActivitylogPlugin;
-use Rmsramos\Activitylog\Infolists\Concerns\HasModifyState;
+use mjood10tn\Activitylog\ActivitylogPlugin;
+use mjood10tn\Activitylog\Infolists\Concerns\HasModifyState;
 
 class TimeLineTitleEntry extends Entry
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmsramos\Activitylog;
+namespace mjood10tn\Activitylog;
 
 use Closure;
 use Filament\Contracts\Plugin;
@@ -59,7 +59,7 @@ class ActivitylogPlugin implements Plugin
 
     public function getId(): string
     {
-        return 'rmsramos/activitylog';
+        return 'mjood10tn/activitylog';
     }
 
     public function register(Panel $panel): void

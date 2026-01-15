@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmsramos\Activitylog\Traits;
+namespace mjood10tn\Activitylog\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 

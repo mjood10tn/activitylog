@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmsramos\Activitylog\Infolists\Concerns;
+namespace mjood10tn\Activitylog\Infolists\Concerns;
 
 use Closure;
 use Illuminate\Support\HtmlString;

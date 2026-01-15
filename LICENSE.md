@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) Rmsramos <rmsramos@gmail.com>
+Copyright (c) mjood10tn <mjood10tn@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

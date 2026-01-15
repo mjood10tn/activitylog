@@ -1,9 +1,9 @@
 <?php
 
-namespace Rmsramos\Activitylog\Resources\ActivitylogResource\Pages;
+namespace mjood10tn\Activitylog\Resources\ActivitylogResource\Pages;
 
 use Filament\Resources\Pages\ListRecords;
-use Rmsramos\Activitylog\Resources\ActivitylogResource;
+use mjood10tn\Activitylog\Resources\ActivitylogResource;
 
 class ListActivitylog extends ListRecords
 {
