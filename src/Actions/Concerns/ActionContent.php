@@ -4,9 +4,9 @@ namespace mjood10tn\Activitylog\Actions\Concerns;
 
 use Carbon\Exceptions\InvalidFormatException;
 use Closure;
-use Filament\Actions\StaticAction;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
+use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -92,7 +92,7 @@ trait ActionContent
 
                                     if ($relationInstance instanceof BelongsToMany) {
                                         $subjectType = $relationInstance->getPivotClass();
-                                        $relatedIds  = $relationInstance->pluck($relationInstance->getTable().'.id')->toArray();
+                                        $relatedIds  = $relationInstance->pluck($relationInstance->getTable() . '.id')->toArray();
 
                                         if (! empty($relatedIds)) {
                                             $query->orWhere(function (Builder $q) use ($subjectType, $relatedIds) {
@@ -104,8 +104,8 @@ trait ActionContent
                                         continue;
                                     }
 
-                                    $relatedModel     = $relationInstance->getRelated();
-                                    $relatedIds       = $relationInstance->pluck('id')->toArray();
+                                    $relatedModel = $relationInstance->getRelated();
+                                    $relatedIds   = $relationInstance->pluck('id')->toArray();
 
                                     if (! empty($relatedIds)) {
                                         $query->orWhere(function (Builder $q) use ($relatedModel, $relatedIds) {
@@ -122,6 +122,7 @@ trait ActionContent
                 });
         };
     }
+
     protected function configureInfolist(): void
     {
         $this->infolist(function (?Model $record, Infolist $infolist) {
@@ -138,7 +139,7 @@ trait ActionContent
 
             return $infolist
                 ->state(['activities' => $formattedActivities])
-                ->schema($this->getSchema());
+                ->schema(fn (Schema $schema): ?Schema => $this->getSchema($schema));
         });
     }
 
@@ -151,9 +152,9 @@ trait ActionContent
             ->icon('heroicon-o-bell-alert');
     }
 
-    protected function getSchema(): array
+    public function getSchema(Schema $schema): ?Schema
     {
-        return [
+        return $schema->schema([
             TimeLineRepeatableEntry::make('activities')
                 ->schema([
                     TimeLineIconEntry::make('activityData.event')
@@ -175,31 +176,31 @@ trait ActionContent
                         ->since()
                         ->badge(),
                 ]),
-        ];
+        ]);
     }
 
-    public function withRelations(?array $relations = null): ?StaticAction
+    public function withRelations(?array $relations = null): static
     {
         $this->withRelations = $relations;
 
         return $this;
     }
 
-    public function timelineIcons(?array $timelineIcons = null): ?StaticAction
+    public function timelineIcons(?array $timelineIcons = null): static
     {
         $this->timelineIcons = $timelineIcons;
 
         return $this;
     }
 
-    public function timelineIconColors(?array $timelineIconColors = null): ?StaticAction
+    public function timelineIconColors(?array $timelineIconColors = null): static
     {
         $this->timelineIconColors = $timelineIconColors;
 
         return $this;
     }
 
-    public function limit(?int $limit = 10): ?StaticAction
+    public function limit(?int $limit = 10): static
     {
         $this->limit = $limit;
 
